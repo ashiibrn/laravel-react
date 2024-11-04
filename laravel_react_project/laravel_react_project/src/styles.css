@@ -1,0 +1,62 @@
+/* App container */
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Widgets container */
+.widgets {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Individual widget styles */
+.widget {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    cursor: grab;
+    transition: background-color 0.3s ease;
+}
+
+.widget:hover {
+    background-color: #45a049;
+}
+
+/* Drop area */
+.page {
+    width: 100%;
+    min-height: 200px;
+    border: 2px dashed #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.page:hover {
+    background-color: #f1f1f1;
+}
+
+/* Dropped widgets */
+.dropped-widget {
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #2196f3;
+    color: white;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+}
