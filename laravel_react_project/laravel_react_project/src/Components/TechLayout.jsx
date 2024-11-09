@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { useContext } from "react";
-import { Navigate, Outlet } from "react-router-dom";
+import { Link, Navigate, Outlet } from "react-router-dom";
 import axiosClient from "../axiosClient";
 import { useStateContext } from "../contexts/contextprovider";
 import psau_logo from "../assets/user/psau_logo.png";
@@ -9,7 +9,7 @@ import bell_icon from "../assets/user/bell_icon.svg";
 import message_icon from "../assets/user/message_icon.svg";
 import user_icon from "../assets/user/user_icon.svg";
 
-export default function DefaultLayout(){
+export default function TechLayout(){
     const {user, token, setUser, setToken} = useStateContext();
     if(!token){
         return <Navigate to='/login'/>
@@ -68,7 +68,8 @@ export default function DefaultLayout(){
                         <img src={user_icon} alt="profile"/>
                     </button>
                     <ul className="dropdown-menu">
-                        <li><a className="dropdown-item" href="#">{user.name}</a></li>
+                        <li><Link className="dropdown-item">{user.name}</Link></li>
+                        <li><Link to='/register' className="dropdown-item">Register</Link></li>
                         <li><a className="dropdown-item" href="#" onClick={onLogout}>Logout</a></li>
                     </ul> 
                 </div>

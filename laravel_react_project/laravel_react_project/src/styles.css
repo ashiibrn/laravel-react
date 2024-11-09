@@ -60,3 +60,9 @@
     text-align: center;
     font-weight: bold;
 }
+
+/* Drag And Drop */
+.dnd-right-bg{
+    background-image: url("./assets/tech/monitor.svg");
+    
+}

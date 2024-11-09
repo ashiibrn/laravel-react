@@ -36,6 +36,7 @@ class AuthController extends Controller
         $user = User::create([
             'name' => $data['name'],
             'id_number' => $data['id_number'],
+            'position' => $data['position'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
@@ -51,7 +52,7 @@ class AuthController extends Controller
     public function getUsers()
     {
         // Make sure to include 'id_number' in your select statement
-        $users = User::select('id', 'name', 'id_number', 'email')->get();
+        $users = User::select('id', 'name', 'id_number', 'position', 'email')->get();
     
         return response()->json(['data' => $users]);
     }

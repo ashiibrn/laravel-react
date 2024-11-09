@@ -1,18 +1,20 @@
-import {createBrowserRouter} from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import Login from './views/login.jsx';
 import Register from './views/register.jsx';
-import DefaultLayout from './Components/DefaultLayout.jsx';
-import GuestLayout from './Components/GuestLayout.jsx';
 import Users from './views/users.jsx';
 import UserForm from './views/UserForm.jsx';
 import Homepage from './views/user/homepage.jsx';
 import DragAndDrop from './DragAndDrop.jsx';
+import Tabs from './tabs.jsx';
+import Health from './views/user/health.jsx'
+import ProtectedLayout from './Components/ProtectedLayout.jsx';
 
-const router = createBrowserRouter ([
+const router = createBrowserRouter([
     {
         path: '/',
-        element: <DefaultLayout />,
+        element: <ProtectedLayout />,
         children: [
+            // Student-specific routes under DefaultLayout
             {
                 path: '/',
                 element: <Homepage />,
@@ -30,26 +32,25 @@ const router = createBrowserRouter ([
                 element: <UserForm key="userUpdate" />
             },
             {
+                path: '/Health',
+                element: <Health />
+            },
+            // Faculty-specific routes under TechLayout
+            {
                 path: '/DragAndDrop',
                 element: <DragAndDrop />
-            }
-        ]
-    },
-
-    {
-        path: '/',
-        element: <GuestLayout />,
-        children: [
-            {
-                path: '/login',
-                element: <Login />,
             },
             {
                 path: '/register',
-                element:  <Register />,
+                element: <Register />,
             }
         ]
     },
+    // Guest routes for login and registration
+    {
+        path: '/login',
+        element: <Login />,
+    }
 ]);
 
 export default router;
