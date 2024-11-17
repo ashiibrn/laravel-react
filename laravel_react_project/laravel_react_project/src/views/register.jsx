@@ -74,7 +74,7 @@ export default function register(){
                                         <option value="student">Student</option>
                                     </select>
                                 </div>
-                            <input ref={emailRef} type="email" placeholder="Email"/>
+                            <input ref={emailRef} type="text" placeholder="User"/>
                             <input ref={passwordRef} type="password" placeholder="Password"/>
                             <button>Register</button>
                         </form>

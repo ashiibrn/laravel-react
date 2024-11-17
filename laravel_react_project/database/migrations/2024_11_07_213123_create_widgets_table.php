@@ -15,6 +15,7 @@ return new class extends Migration
         $table->id();
         $table->string('widget_type');
         $table->integer('drop_area_index');
+        $table->string('side');
         $table->string('issue_category')->nullable();
         $table->string('specific_issue')->nullable();
         $table->timestamps();

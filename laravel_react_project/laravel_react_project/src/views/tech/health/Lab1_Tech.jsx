@@ -1,11 +1,6 @@
 import { useState, useEffect } from "react";
-import axiosClient from "./axiosClient";
-import monitor from "./assets/tech/monitor.svg";
-import hardware from "./assets/tech/hardware.svg";
-import software from "./assets/tech/software.svg";
-import network from "./assets/tech/network.svg";
 
-function DragAndDrop() {
+function Lab1_Tech() {
     const [dropAreasLeft, setDropAreasLeft] = useState(Array(16).fill([])); // 4x4 grid
     const [dropAreasRight, setDropAreasRight] = useState(Array(12).fill([])); // 3x4 grid
     const [showWidgetModal, setShowWidgetModal] = useState(false); // Widget Details Modal
@@ -390,4 +385,4 @@ function DragAndDrop() {
     );
 }
 
-export default DragAndDrop;
+export default Lab1_Tech;

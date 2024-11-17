@@ -1,14 +1,24 @@
+import { useNavigate } from 'react-router-dom';
 import Health_lab1 from './health/health_lab1.jsx';
 import Health_lab2 from './health/health_lab2.jsx';
 import Health_lab3 from './health/health_lab3.jsx';
 import Health_lab4 from './health/health_lab4.jsx';
 import Health_lab5 from './health/health_lab5.jsx';
 import Health_lab6 from './health/health_lab6.jsx';
+import dashboard_icon from "../../assets/user/dashboard_icon.svg";
+import health_icon from "../../assets/user/health_icon.svg";
+import info_icon from "../../assets/user/info_icon.svg";
+import location_icon from "../../assets/user/location_icon.svg";
+import message_icon from "../../assets/user/message_icon.svg";
+import about_icon from "../../assets/user/about_icon.svg";
+import alert_icon from "../../assets/user/alert_icon.svg";
+import DragAndDrop from "../../DragAndDrop.jsx";
 import { useState } from 'react';
 
 
 function health(){
     const [activeTab, setActiveTab] = useState('health_lab1');
+    const navigate = useNavigate();
 
     // Function to render the content based on the active tab
     const renderContent = () => {
@@ -25,6 +35,8 @@ function health(){
                 return <Health_lab5 />;
             case 'health_lab6':
                 return <Health_lab6 />;
+            case 'DragAndDrop':
+                return <DragAndDrop />;
             default:
                 return <Health_lab1 />;
         }
@@ -68,6 +80,7 @@ function health(){
                 <button onClick={() => setActiveTab('health_lab4')}>Lab 4</button>
                 <button onClick={() => setActiveTab('health_lab5')}>Lab 5</button>
                 <button onClick={() => setActiveTab('health_lab6')}>Lab 6</button>
+                <button onClick={() => setActiveTab('DragAndDrop')}>Drag and Drop</button>
             </div>
 
             {/* Tab Content */}

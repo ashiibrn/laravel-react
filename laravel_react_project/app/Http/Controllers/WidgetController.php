@@ -13,6 +13,7 @@ class WidgetController extends Controller
         $validated = $request->validate([
             'widget_type' => 'required|string',
             'drop_area_index' => 'required|integer',
+            'side' => 'required|string',
             'issue_category' => 'nullable|string',
             'specific_issue' => 'nullable|string',
         ]);
@@ -28,4 +29,15 @@ class WidgetController extends Controller
         $widgets = Widget::all();
         return response()->json($widgets);
     }
+
+    public function getIssues($widgetType)
+    {
+        $issues = Widget::where('widget_type', $widgetType)
+                        ->whereNotNull('issue_category')  // Ensure that there's an issue category
+                        ->get();
+
+        return response()->json($issues);
+    }
+
+
 }

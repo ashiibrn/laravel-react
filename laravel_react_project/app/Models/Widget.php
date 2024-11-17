@@ -12,6 +12,7 @@ class Widget extends Model
     protected $fillable = [
         'widget_type',
         'drop_area_index',
+        'side',
         'issue_category',
         'specific_issue',
     ];

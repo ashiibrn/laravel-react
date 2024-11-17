@@ -8,6 +8,7 @@ import DragAndDrop from './DragAndDrop.jsx';
 import Tabs from './tabs.jsx';
 import Health from './views/user/health.jsx'
 import ProtectedLayout from './Components/ProtectedLayout.jsx';
+import Lab1_Tech from './views/tech/health/Lab1_Tech.jsx';
 
 const router = createBrowserRouter([
     {
@@ -41,8 +42,8 @@ const router = createBrowserRouter([
                 element: <DragAndDrop />
             },
             {
-                path: '/register',
-                element: <Register />,
+                path: '/Lab1_Tech',
+                element: <Lab1_Tech />
             }
         ]
     },
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
     {
         path: '/login',
         element: <Login />,
+    },
+    {
+        path: '/register',
+        element: <Register />,
     }
 ]);
 

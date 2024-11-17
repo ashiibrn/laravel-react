@@ -34,7 +34,7 @@
         Route::get('/widgets', [WidgetController::class, 'index']);
     });
 
-
+    Route::get('/widget/{widgetType}/issues', [WidgetController::class, 'getIssues']);
 
     Route::post('login',[AuthController::class,'login']);
     Route::post('register',[AuthController::class,'register']);
