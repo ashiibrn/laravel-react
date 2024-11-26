@@ -1,0 +1,75 @@
+.techcurrentActiveButton{
+    width: 15vw;
+    height: 55px;
+    background: linear-gradient(45deg, #331541, #142653, #202a58);
+    color: #FFFFFF;
+    border-radius: 35px;
+    border: solid 2px #c5baba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    transition: 0.6s;
+}
+.technotCurrentActiveButton{
+    width: 15vw;
+    height: 55px;
+    background: linear-gradient(-45deg, #5c2774, #335cc5, #637ffd);
+    color: #000000;
+    border-radius: 15px;
+    border: solid 2px #5E72eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.6s;
+}
+.techcurrentActiveButton:hover{
+    border: solid 2px #c5baba;
+    background: linear-gradient(45deg, #331541, #142653, #202a58);
+    border-radius: 35px;
+    color: #FFFFFF;
+}
+.technotCurrentActiveButton:hover{
+    border: solid 2px #c5baba;
+    background: linear-gradient(45deg, #331541, #142653, #202a58);
+    border-radius: 35px;
+    color: #FFFFFF;
+}
+.dashboard-sub-route-button-tech-partition{
+    display: flex;
+    margin-top: 0.2rem;
+    gap: 0.2rem;
+}
+.dashboard-sub-route-button-tech-partition button{
+    background: linear-gradient(-45deg, #5c2774, #335cc5, #637ffd);
+    height: 40vh;
+    border-radius: 15px;
+    border: solid 2px #5E72eb;
+}
+.dashboard-sub-route-button-tech-partition button:hover{
+    background: linear-gradient(45deg, #331541, #142653, #202a58);
+    color: #FFFFFF;
+    border: solid 3px #c5baba;
+    transition: 1s;
+}
+.dashboard-sub-route-button-tech-partition button:hover img{
+    transition: 1s;
+    filter: invert(100%) brightness(100%);
+}
+.dashboard-sub-route-button-tech-partition button:hover .dashboard-whole-button1-label1 p{
+    transition: 1s;
+    color: #FFFFFF;
+}
+.tech_layout_button{
+    background-color: #ff7889;
+}
+.tech_layout_button:hover{
+    background-color: #5a282f;
+    border: solid 1px #000000;
+    color: #FFFFFF;
+}
+.tech_layout_button:hover img{
+    filter: invert(100%);
+}
